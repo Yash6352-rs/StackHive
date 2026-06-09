@@ -36,26 +36,28 @@ final questionDetailProvider = StreamProvider.family<QuestionModel?, String>((
 
 final filteredQuestionProvider =
     StreamProvider.family<List<QuestionModel>, String>((ref, tag) {
-      final repo = ref.read(questionRepositoryProvider);
-      return repo.getQuestionsByTag(tag);
-    });
+  final repo = ref.read(questionRepositoryProvider);
+  return repo.getQuestionsByTag(tag);
+});
 
 final searchQuestionProvider =
     StreamProvider.family<List<QuestionModel>, String>((ref, keyword) {
-      final repo = ref.read(questionRepositoryProvider);
-      return repo.searchQuestions(keyword);
-    });
+  final repo = ref.read(questionRepositoryProvider);
+  return repo.searchQuestions(keyword);
+});
 
 final questionUserVoteProvider =
-    StreamProvider.family<int?, ({String questionId, String userId})>((ref,params,) {
-      
-      final repo = ref.watch(questionRepositoryProvider);
+    StreamProvider.family<int?, ({String questionId, String userId})>((
+  ref,
+  params,
+) {
+  final repo = ref.watch(questionRepositoryProvider);
 
-      return repo.getUserVote(
-        questionId: params.questionId,
-        userId: params.userId,
-      );
-    });
+  return repo.getUserVote(
+    questionId: params.questionId,
+    userId: params.userId,
+  );
+});
 
 // Pagination Class and Provider
 
@@ -85,20 +87,24 @@ class PaginatedQuestionsNotifier extends StateNotifier<List<QuestionModel>> {
 
     _isLoading = true;
 
-    final (newQuestions, lastDoc) = await _repo.fetchQuestionsPaginated(
-      tag: _tag,
-      sort: _sort,
-      lastDoc: _lastDoc,
-    );
+    try {
+      final (newQuestions, lastDoc) = await _repo.fetchQuestionsPaginated(
+        tag: _tag,
+        sort: _sort,
+        lastDoc: _lastDoc,
+      );
 
-    if (newQuestions.isEmpty) {
-      _hasMore = false;
-    } else {
-      state = [...state, ...newQuestions];
-      _lastDoc = lastDoc;
+      if (newQuestions.isEmpty) {
+        _hasMore = false;
+      } else {
+        state = [...state, ...newQuestions];
+        _lastDoc = lastDoc;
+      }
+    } catch (e) {
+      print(e);
+    } finally {
+      _isLoading = false;
     }
-
-    _isLoading = false;
   }
 
   void removeLocalQuestion(String questionId) {
@@ -124,16 +130,14 @@ class PaginatedQuestionsNotifier extends StateNotifier<List<QuestionModel>> {
 
 // pagination provider
 // Now pagination depends on selectedTag
-final paginatedQuestionsProvider =
-    StateNotifierProvider.family<
-      PaginatedQuestionsNotifier,
-      List<QuestionModel>,
-      PaginationParams
-    >((ref, params) {
-      final repo = ref.read(questionRepositoryProvider);
+final paginatedQuestionsProvider = StateNotifierProvider.family<
+    PaginatedQuestionsNotifier,
+    List<QuestionModel>,
+    PaginationParams>((ref, params) {
+  final repo = ref.read(questionRepositoryProvider);
 
-      return PaginatedQuestionsNotifier(repo, params.tag, params.sort);
-    });
+  return PaginatedQuestionsNotifier(repo, params.tag, params.sort);
+});
 
 // Sort provider
 final questionSortProvider = StateProvider((ref) {

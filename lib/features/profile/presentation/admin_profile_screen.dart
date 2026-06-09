@@ -103,9 +103,9 @@ class AdminProfileScreen extends ConsumerWidget {
 
                           /// BRANDING (CENTERED)
                           Positioned(
-                            top: 100,
-                            left: 40,
-                            right: 0,
+                            top: 95,
+                            left: 30,
+                            right: 10,
                             child: Center(
                               child: Text(
                                 "StackHive",
@@ -121,8 +121,9 @@ class AdminProfileScreen extends ConsumerWidget {
 
                           /// WELCOME TEXT
                           Positioned(
-                            top: 140,
-                            left: 150,
+                            top: 135,
+                            left: 135,
+                            right: 10,
                             child: Text(
                               "${greeting()}, ${user.name}",
                               style: TextStyle(

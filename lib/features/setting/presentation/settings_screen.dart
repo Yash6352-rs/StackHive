@@ -86,6 +86,11 @@ class SettingsScreen extends ConsumerWidget {
               onTap: () => context.push('/aboutApp'),
             ),
             _SettingsTile(
+              icon: Icons.auto_awesome,
+              title: "About AI Answer",
+              onTap: () => context.push('/aboutAiAnswer'),
+            ),
+            _SettingsTile(
               icon: Icons.privacy_tip_outlined,
               title: "Privacy Policy",
               onTap: () => context.push('/privacy'),

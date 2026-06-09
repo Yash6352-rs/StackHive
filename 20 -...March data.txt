@@ -1506,24 +1506,25 @@ tag provider
 
 ______________________________________________________________________________________
 
-1 Integrated OpenRouter AI to generate automatic answers for newly posted questions.
-2 Built a Node.js and Express backend for AI-powered answer generation.
-3 Implemented AI answer storage in Firestore with existing answer workflows.
-4 Added AI-generated answers with support for voting and best-answer selection.
-5 Designed a dedicated AI Answer UI with custom badges and themed styling.
-6 Enhanced the internal Q&A experience with instant AI-assisted responses.
-7 Maintained compatibility with answer ranking, voting, and moderation features.
-8 Improved user engagement by providing contextual AI responses for unanswered questions.
+1 Added AI-powered answer generation using OpenRouter for newly created questions.
+2 Built a Node.js + Express backend service to handle AI answer requests.
+3 Integrated Flutter app with backend APIs through a dedicated AI service layer.
+4 Extended the Answer model with AI support using the isAiAnswer flag.
+5 Implemented automatic AI answer creation immediately after question posting.
+6 Stored AI answers in the existing Firestore answers subcollection to reuse voting, ranking, 
+  and moderation features.
+7 Created a dedicated AI Answer card design with badges, themed colors, and AI-specific styling.
+8 Added an AI Answer information screen explaining how AI-generated responses work and their limitations.
+9 Updated Firestore security rules to properly support vote switching and community voting workflows.
+10 Preserved full compatibility with answer voting, best-answer selection, reporting, editing restrictions, 
+  and answer sorting.
 
 ______________________________________________________________________________________
 Remaining Things
 
-Add isAiAnswer=false to other answer
-Tag based search is not working check that
-Profile layout make it good
-Add AI Answer Screen if needed (what is AI Answer)
-
+Removes all old data and add new ones
+Also check the google login/signup in both apps
 Make this StackHive App in my phone
 Add proper data to make it good
-Aslo make new Exchanza App in my phone
+Also make new Exchanza App in my phone
 Add proper data in that also

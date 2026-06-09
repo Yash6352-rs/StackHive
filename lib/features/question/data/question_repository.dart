@@ -248,14 +248,19 @@ class QuestionRepository {
       query = query.startAfterDocument(lastDoc);
     }
 
-    final snapshot = await query.get();
+    try {
+      final snapshot = await query.get();
 
-    final questions =
-        snapshot.docs.map((doc) => QuestionModel.fromFirestore(doc)).toList();
+      final questions =
+          snapshot.docs.map((doc) => QuestionModel.fromFirestore(doc)).toList();
 
-    final lastVisible = snapshot.docs.isNotEmpty ? snapshot.docs.last : null;
+      final lastVisible = snapshot.docs.isNotEmpty ? snapshot.docs.last : null;
 
-    return (questions, lastVisible);
+      return (questions, lastVisible);
+    } catch (e) {
+      print("FIRSTORE QUERY ERROR: $e");
+      rethrow;
+    }
   }
 }
 

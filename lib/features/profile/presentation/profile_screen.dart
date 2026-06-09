@@ -84,8 +84,9 @@ class ProfileScreen extends ConsumerWidget {
 
                           /// Branding (StackHive)
                           Positioned(
-                            top: 110,
-                            left: 150,
+                            top: 100,
+                            left: 135,
+                            right: 10,
                             child: Text(
                               "StackHive",
                               style: TextStyle(
@@ -99,8 +100,9 @@ class ProfileScreen extends ConsumerWidget {
 
                           /// Welcome Text
                           Positioned(
-                            top: 150,
-                            left: 150,
+                            top: 140,
+                            left: 135,
+                            right: 10,
                             child: Text(
                               "${greeting()}, ${user.name}",
                               style: TextStyle(

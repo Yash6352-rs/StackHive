@@ -11,7 +11,6 @@ import 'package:stackhive/features/question/presentation/widget/showQuesActions.
 import 'package:stackhive/features/question/provider/question_provider.dart';
 import 'package:stackhive/features/tag/provider/selected_tag_provider.dart';
 import 'package:stackhive/features/tag/provider/tag_provider.dart';
-
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
@@ -327,13 +326,13 @@ Widget _notificationItem(BuildContext context) {
 
           if (unreadCount > 0)
             Positioned(
-              right: 2,
-              top: 2,
+              right: 8,
+              top: 6,
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                padding: EdgeInsets.symmetric(horizontal: 4, vertical: 0),
                 decoration: BoxDecoration(
                   color: Colors.red,
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(
                   unreadCount > 9 ? '9+' : '$unreadCount',

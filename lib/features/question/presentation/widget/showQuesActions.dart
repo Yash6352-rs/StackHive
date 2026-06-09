@@ -83,6 +83,7 @@ void showQuesActions(
                                   enabled: !isBlocked,
                                   selected: userVote == 1,
                                   onTap: () async {
+                                    print("Current Vote: $userVote");
                                     int newVote;
 
                                     if (userVote == 1) {
@@ -90,6 +91,8 @@ void showQuesActions(
                                     } else {
                                       newVote = 1; // upvote
                                     }
+
+                                    print("New Vote: $newVote");
 
                                     await ref
                                         .read(questionRepositoryProvider)

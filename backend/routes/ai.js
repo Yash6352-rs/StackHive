@@ -5,8 +5,6 @@ const router = express.Router();
 
 router.post("/generate-answer", async (req, res) => {
   try {
-    console.log("AI Route Hit");
-    console.log(req.body);
 
     const { questionId, title, description } = req.body;
 

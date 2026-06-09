@@ -23,6 +23,7 @@ import 'package:stackhive/features/question/presentation/question_detail_screen.
 import 'package:stackhive/features/question/presentation/search_screen.dart';
 import 'package:stackhive/features/report/presentation/admin_reports_screen.dart';
 import 'package:stackhive/features/saved/presentation/saved_questions_screen.dart';
+import 'package:stackhive/features/setting/presentation/about_ai_answer.dart';
 import 'package:stackhive/features/setting/presentation/about_app_screen.dart';
 import 'package:stackhive/features/setting/presentation/account_detail_screen.dart';
 import 'package:stackhive/features/setting/presentation/account_status_screen.dart';
@@ -137,6 +138,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/helpsupport',
         builder: (context, state) => const HelpSupportScreen(),
+      ),
+      GoRoute(
+        path: '/aboutAiAnswer',
+        builder: (context, state) => const AboutAiAnswer(),
       ),
 
       GoRoute(
