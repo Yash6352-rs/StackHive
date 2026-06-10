@@ -68,7 +68,7 @@ Push notification using Firebase Cloud Messaging
 
 👑 Admin Features
 
-Viw all users
+View all users
 
 Block/Unblock users
 Delete inappropriate questions
@@ -351,6 +351,18 @@ App Language settings bottom sheet
 
 🚀 Phase 8
 
+Added AI-powered answer generation using OpenRouter for newly created questions.
+Built a Node.js + Express backend service to handle AI answer requests.
+Integrated Flutter app with backend APIs through a dedicated AI service layer.
+Extended the Answer model with AI support using the isAiAnswer flag.
+Implemented automatic AI answer creation immediately after question posting.
+Stored AI answers in the existing Firestore answers subcollection to reuse voting, ranking, 
+  and moderation features.
+Created a dedicated AI Answer card design with badges, themed colors, and AI-specific styling.
+Added an AI Answer information screen explaining how AI-generated responses work and their limitations.
+Updated Firestore security rules to properly support vote switching and community voting workflows.
+Preserved full compatibility with answer voting, best-answer selection, reporting, editing restrictions, 
+  and answer sorting.
 -----------------------------------------------------------
 
 🧭 PHASE 5 ROADMAP
@@ -1506,18 +1518,7 @@ tag provider
 
 ______________________________________________________________________________________
 
-1 Added AI-powered answer generation using OpenRouter for newly created questions.
-2 Built a Node.js + Express backend service to handle AI answer requests.
-3 Integrated Flutter app with backend APIs through a dedicated AI service layer.
-4 Extended the Answer model with AI support using the isAiAnswer flag.
-5 Implemented automatic AI answer creation immediately after question posting.
-6 Stored AI answers in the existing Firestore answers subcollection to reuse voting, ranking, 
-  and moderation features.
-7 Created a dedicated AI Answer card design with badges, themed colors, and AI-specific styling.
-8 Added an AI Answer information screen explaining how AI-generated responses work and their limitations.
-9 Updated Firestore security rules to properly support vote switching and community voting workflows.
-10 Preserved full compatibility with answer voting, best-answer selection, reporting, editing restrictions, 
-  and answer sorting.
+
 
 ______________________________________________________________________________________
 Remaining Things
