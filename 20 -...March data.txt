@@ -1522,9 +1522,19 @@ ________________________________________________________________________________
 ______________________________________________________________________________________
 Remaining Things
 
+Also make new Exchanza App in my phone
+
+Resume update for StackHive Update
+Make a good portfolio
+
+Saturday work
+Make Live Answer Ai in Render (So StackHive is complete)
+
+Make Live Trade Ai in Render 
+Add data in Exchanza (So Exchanza mobile is complete)
+                                                                                                                   
 Removes all old data and add new ones
 Also check the google login/signup in both apps
-Make this StackHive App in my phone
-Add proper data to make it good
-Also make new Exchanza App in my phone
-Add proper data in that also
+Also clone all repo from office acc to personal acc
+
+                                                                                     
