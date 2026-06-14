@@ -12,11 +12,9 @@ class AiService {
     try {
       final response = await http.post(
         Uri.parse(
-          "http://192.168.1.213:5000/api/ai/generate-answer"
+          "https://stackhive-ai-answer-server.onrender.com/api/ai/generate-answer",
         ),
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: {"Content-Type": "application/json"},
         body: jsonEncode({
           "questionId": questionId,
           "title": title,
@@ -25,9 +23,7 @@ class AiService {
       );
 
       if (response.statusCode != 200) {
-        debugPrint(
-          "AI Error: ${response.statusCode} - ${response.body}",
-        );
+        debugPrint("AI Error: ${response.statusCode} - ${response.body}");
         return null;
       }
 
