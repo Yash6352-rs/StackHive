@@ -65,6 +65,13 @@ StackHive enables users to create questions, provide answers, vote on helpful re
 
 ---
 
+🤖 AI-Powered Assistance
+
+➤ AI Generated Answers for Questions
+➤ Faster knowledge discovery and support
+
+---
+
 ## 🔎 Search & Discovery
 
 - Search Questions by Keywords
