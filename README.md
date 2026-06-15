@@ -87,6 +87,7 @@ StackHive enables users to create questions, provide answers, vote on helpful re
 
 ## 🌙 Additional Features
 
+- AI Answer
 - Dark Mode Support
 - Saved Questions (Bookmarks)
 - Profile Statistics
