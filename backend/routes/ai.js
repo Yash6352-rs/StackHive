@@ -29,7 +29,7 @@ router.post("/generate-answer", async (req, res) => {
             ${description}
 
             Rules:
-            - Maximum 3 sentences.
+            - Maximum 2 sentences.
             - Keep answer concise.
             - Be practical.
             - Do not use markdown.

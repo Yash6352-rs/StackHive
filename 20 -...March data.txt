@@ -1538,4 +1538,88 @@ Removes all old data and add new ones
 Also check the google login/signup in both apps
 Also clone all repo from office acc to personal acc
 
-     ok good     so good                                                                        
+
+
+On your last day
+
+For your personal GitHub account, I would do:
+
+1. Remove the personal SSH key from GitHub
+
+GitHub → Settings → SSH and GPG Keys
+
+Delete:
+
+Mac Mini Personal
+
+(or whatever name you gave it)
+
+This immediately revokes access.
+
+2. Delete the personal key from the office Mac
+
+Run:
+
+rm ~/.ssh/id_ed25519_personal
+rm ~/.ssh/id_ed25519_personal.pub
+3. Remove the SSH config entry
+
+Edit:
+
+nano ~/.ssh/config
+
+Remove:
+
+Host github-personal
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519_personal
+
+Save and exit.
+
+4. Remove any personal repositories from the office machine
+
+For example:
+
+~/StackHive
+~/CampaignIQ
+...
+
+if they are your personal projects and company policy requires it.
+
+5. Sign out of personal accounts
+
+Examples:
+
+Personal GitHub
+Personal Gmail
+ChatGPT
+LinkedIn
+Any personal cloud storage
+
+from browser and apps.
+
+What you do NOT need to do
+
+You do not need to:
+
+❌ Delete the office SSH key
+❌ Modify office GitHub settings
+❌ Touch office repositories
+❌ Change the office GitHub account
+
+Those belong to the company.
+
+So the cleanup is basically:
+
+Delete personal SSH key from GitHub
+Delete personal key files from Mac
+Remove personal repos
+Sign out of personal accounts
+
+and you're done. That's the standard clean separation between personal and company accounts.
+
+                
+             
+             
+        

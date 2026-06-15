@@ -14,11 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "739978018228-tm5vsrlcemgtmdja2jpl3693bodcppfd.apps.googleusercontent.com",
+          "client_id": "739978018228-r31a3eg4q26o8sda3mmfe7emna2ke3c4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.stackhive",
-            "certificate_hash": "281b2516460d24766e4da914a913345c3f6daade"
+            "certificate_hash": "c67e03d39e08a745a02d18806c2cbacb88387f6b"
           }
         },
         {

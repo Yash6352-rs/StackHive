@@ -12,7 +12,7 @@ class AiService {
     try {
       final response = await http.post(
         Uri.parse(
-          "https://stackhive-ai-answer-server.onrender.com/api/ai/generate-answer",
+          "http://192.168.1.213:5000/api/ai/generate-answer",
         ),
         headers: {"Content-Type": "application/json"},
         body: jsonEncode({

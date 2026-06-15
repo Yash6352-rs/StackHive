@@ -11,9 +11,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("StackHive AI Backend is running successfully!");
-});
+// app.get("/", (req, res) => {
+//   res.send("StackHive AI Backend is running successfully!");
+// });
 
 app.use("/api/ai", aiRoutes);
 
