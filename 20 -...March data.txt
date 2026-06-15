@@ -1538,4 +1538,4 @@ Removes all old data and add new ones
 Also check the google login/signup in both apps
 Also clone all repo from office acc to personal acc
 
-     ok good                                                                                
+     ok good     so good                                                                        
